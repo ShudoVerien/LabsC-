@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person
+{
+public:
+	string firstname;
+	int age;
+	string lastname;
+};
+
+void print(Person* person)
+{
+	cout << person->firstname << " " << person->lastname << " is " << person->age << " years old" << endl;
+}
+
+int main()
+{
+	Person person;
+	person.firstname = "Illia";
+	person.age = 19;
+	person.lastname = "Striltsiv";
+	cout << "Hello my buddy " << person.firstname << "\n";
+	print(&person); printf("\n");
+
+	return 0;
+}
